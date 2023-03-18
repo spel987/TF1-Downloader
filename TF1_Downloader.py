@@ -6,20 +6,19 @@ from os import system, path
 from wget import download
 from subprocess import Popen, DEVNULL
 from requests import get
-from pystyle import Colors, Colorate
-from colorama import Fore, init
+from colorama import Fore
 from re import sub
 
 system("title " + "TF1 Downloader ~ Nathoune987")
 
 def ascii_print():
     system("cls")
-    print(Colorate.Vertical(Colors.blue_to_white, """ ___________ __   ______                    _                 _           
+    print(f"""{Fore.LIGHTCYAN_EX} ___________ __   ______                    _                 _           
 |_   _|  ___/  |  |  _  \                  | |               | |          
   | | | |_  `| |  | | | |_____      ___ __ | | ___   __ _  __| | ___ _ __ 
   | | |  _|  | |  | | | / _ \ \ /\ / / '_ \| |/ _ \ / _` |/ _` |/ _ \ '__|
   | | | |   _| |_ | |/ / (_) \ V  V /| | | | | (_) | (_| | (_| |  __/ |   
-  \_/ \_|   \___/ |___/ \___/ \_/\_/ |_| |_|_|\___/ \__,_|\__,_|\___|_|""", 1))
+  \_/ \_|   \___/ |___/ \___/ \_/\_/ |_| |_|_|\___/ \__,_|\__,_|\___|_|{Fore.RESET}""")
     print("\r\n                  ~ https://github.com/Nathoune987")
 
 def delete_temp_files():
