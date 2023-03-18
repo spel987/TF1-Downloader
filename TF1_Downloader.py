@@ -191,10 +191,6 @@ video_compiling.wait()
 
 delete_temp_files()
 
-end_choice = input(f"\r\n{Fore.LIGHTGREEN_EX}\"{recovered_video_title}.mp4\" {Fore.WHITE}est disponnible.")
+input(f"\r\n{Fore.LIGHTGREEN_EX}\"{recovered_video_title}.mp4\" {Fore.WHITE}est disponnible.\r\nAppuyer pour quitter")
 
-if end_choice == "":
-    system(f"{recovered_video_title}.mp4")
-    exit(1)
-else:
-    exit(1)
+exit(1)
