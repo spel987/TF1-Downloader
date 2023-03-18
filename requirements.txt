@@ -3,4 +3,3 @@ selenium
 requests
 colorama
 wget
-pystyle
