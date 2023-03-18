@@ -47,6 +47,10 @@ TF1 Downloader se chargera du téléchargement et de l'assemblage :
 - Des tous les segments vidéo
 - Des tous les segments audio
 
+Demonstration vidéo :
+
+https://user-images.githubusercontent.com/89778476/226112718-d0f87680-9a9f-4d54-a7a6-98abbf4f2d05.mp4
+
 ## ⚙️ Fonctionnement
 
 ### Comment TF1 Downloader fonctionne-t-il ?
