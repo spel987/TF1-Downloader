@@ -9,7 +9,7 @@ from requests import get
 from colorama import Fore
 from re import sub
 
-system("title " + "TF1 Downloader ~ Nathoune987")
+system("title " + "TF1 Downloader")
 
 def ascii_print():
     system("cls")
@@ -77,6 +77,8 @@ print("\r\nDémarrage...")
 
 options = webdriver.FirefoxOptions()
 options.binary_location = firefox_path["firefox_path"]
+options.add_argument('--headless')
+options.set_preference("media.volume_scale", "0.0")
 
 driver = webdriver.Firefox(executable_path=path.abspath(r"assets/geckodriver.exe"), service_log_path=path.devnull, options=options)
 
@@ -92,7 +94,7 @@ else:
   input(f"\r\n{Fore.LIGHTRED_EX}[!] Ce lien n'est pas valide, entrez un lien TF1.")
   exit(1)
 
-print(f"\r\n{Fore.CYAN}[✓]{Fore.WHITE} Ouverture du lien (1/6)")
+print(f"\r\n{Fore.CYAN}[✓]{Fore.WHITE} Ouverture du lien (1/7)")
 
 driver.get(tf1_link)
 
@@ -100,7 +102,7 @@ recovered_video_title = sub("[:/\\\*\?\"<>\|]", "", driver.find_element(By.CSS_S
 
 click_when_available(".LongButton_longButton__medium_S_9PJ")
 
-print(f"\r\n{Fore.CYAN}[✓]{Fore.WHITE} Connexion")
+print(f"\r\n{Fore.CYAN}[✓]{Fore.WHITE} Connexion (2/7)")
 
 #Pour visionner un replay, il faut nécéssairement un compte TF1. Le script se connecte a un compte créé pour l'occasion
 complete_when_available("#email", "jimen23366@huvacliq.com")
@@ -111,7 +113,7 @@ click_when_available("#popin_tc_privacy_button_3")
 
 click_when_available(".longButton__content")
 
-print(f"\r\n{Fore.CYAN}[✓]{Fore.WHITE} Traitement (2/6)")
+print(f"\r\n{Fore.CYAN}[✓]{Fore.WHITE} Traitement (3/7)")
 
 while True:
   mpd_file_url = None
@@ -136,7 +138,7 @@ for element in tree.findall('.//{*}SegmentTemplate'):
 for element in tree.findall('.//{*}Representation'):
     if element.attrib["id"].startswith("audio"):
         audio_file_code = element.attrib["id"]
-    else:
+    elif element.attrib["id"].startswith("video"):
         video_file_code = element.attrib["id"]
         video_file_codes.append(video_file_code)
 
@@ -144,7 +146,7 @@ video_qualities = ['234p', '270p', '360p', '480p', '576p', '720p']
 
 qualities_and_video_codes = {video_qualities[i]: video_file_codes[i] for i in range(len(video_file_codes))}
 
-print(f"\r\n{Fore.CYAN}[✓]{Fore.WHITE} Choisissez la qualité voulue (3/6) :\r\n")
+print(f"\r\n{Fore.CYAN}[✓]{Fore.WHITE} Choisissez la qualité voulue (4/7) :\r\n")
 
 for choice_number, available_quality in enumerate(qualities_and_video_codes.keys(), 1):
     qualities_choice = f"{choice_number}. {available_quality}"
@@ -155,7 +157,7 @@ quality_choice = int(input(f"\r\n{Fore.LIGHTBLUE_EX}[>]{Fore.WHITE} Choix : "))
 video_url_base = f"{tf1_stream_url}{media_code}{list(qualities_and_video_codes.values())[quality_choice-1]}"
 audio_url_base = f"{tf1_stream_url}{media_code}{audio_file_code}"
 
-print(f"\r\n{Fore.CYAN}[✓]{Fore.WHITE} Téléchargement des segments vidéos (4/6)\r\n{Fore.LIGHTCYAN_EX}")
+print(f"\r\n{Fore.CYAN}[✓]{Fore.WHITE} Téléchargement des segments vidéos (5/7)\r\n{Fore.LIGHTCYAN_EX}")
 
 download(f"{video_url_base}.m4s?m", "assets/dl_temp/v_0.m4s")
 
@@ -163,7 +165,7 @@ segment_number = 1
 
 download_all_segment(video_url_base, "v")
 
-print(f"\r\n\r\n{Fore.CYAN}[✓]{Fore.WHITE} Téléchargement des segments audios (5/6)\r\n{Fore.LIGHTCYAN_EX}")
+print(f"\r\n\r\n{Fore.CYAN}[✓]{Fore.WHITE} Téléchargement des segments audios (6/7)\r\n{Fore.LIGHTCYAN_EX}")
 
 download(f"{audio_url_base}.m4s?m", "assets/dl_temp/a_0.m4s")
 
@@ -171,7 +173,7 @@ segment_number = 1
 
 download_all_segment(audio_url_base, "a")
    
-print(f"\r\n\r\n{Fore.CYAN}[✓]{Fore.WHITE} Compilation des pistes audios et vidéos (6/6)")
+print(f"\r\n\r\n{Fore.CYAN}[✓]{Fore.WHITE} Compilation des pistes audios et vidéos (7/7)")
 
 all_video_segments = ""
 all_audio_segments = ""
