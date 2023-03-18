@@ -1,0 +1,6 @@
+selenium-wire
+selenium
+requests
+colorama
+wget
+pystyle
