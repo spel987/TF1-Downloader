@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 ### Télécharger à partir des serveurs de TF1 :
 
-Il suffit de lancer le script Python, entrer un lien de replay TF1. Ensuite, le script va automatiquement l'ouvrir, il se connectera ensuite à un compte TF1 fait pour l'occasion et commencera le traitement. Ensuite, vous aurez le choix de la qualité désirée pour votre vidéo replay. Le script commencera automatiquement le téléchargement de tous les segments vidéo et audio, puis les assemblera avec `ffmpeg`. Pour plus de détail sur le fonctionnement du script.
+Il suffit de lancer le script Python, entrer un lien de replay TF1. Ensuite, le script va automatiquement l'ouvrir, il se connectera ensuite à un compte TF1 fait pour l'occasion et commencera le traitement. Ensuite, vous aurez le choix de la qualité désirée pour votre vidéo replay. Le script commencera automatiquement le téléchargement de tous les segments vidéo et audio, puis les assemblera avec `ffmpeg`. Pour plus de détail sur le fonctionnement du script, veuillez vous rendre à la rubrique <a href="#%EF%B8%8F-fonctionnement">Fonctionnement</a>.
 
 TF1 Downloader se chargera du téléchargement et de l'assemblage :
 
@@ -50,6 +50,10 @@ TF1 Downloader se chargera du téléchargement et de l'assemblage :
 Demonstration vidéo :
 
 https://user-images.githubusercontent.com/89778476/226112718-d0f87680-9a9f-4d54-a7a6-98abbf4f2d05.mp4
+
+<br>
+
+**⚠️ ATTENTION : TF1 Downloader est limité au téléchargement de vidéos non protégées par DRM. Pour plus d'informations, veuillez vous rendre dans la rubrique <a href="#-limitations-drm">"Limitations DRM"</a>**.
 
 ## ⚙️ Fonctionnement
 
@@ -102,6 +106,16 @@ ffmpeg -i "concat:v_0.m4s|v_1.m4s|v_2.m4s|v_3.m4s|..." -i "concat:a_0.m4s|a_1.m4
 ```
 
 Nous nous retrouvons donc avec `output.mp4` comprenant les pistes audio et vidéo synchronisées et lisibles.
+
+## 🔒 Limitations DRM
+
+Certaines vidéos présente sur le site de TF1 sont protégées par DRM. 
+
+La protection DRM (Digital Rights Management) des médias est un système de sécurité qui empêche la copie et la redistribution non autorisées de contenu numérique, tels que des films, de la musique, des livres électroniques, etc. Les DRM fonctionnent en chiffrant le contenu numérique afin qu'il ne puisse être lu que sur des appareils ou des logiciels spécifiques avec des clés de déchiffrement appropriées. Cela permet aux fournisseurs de contenu de contrôler l'accès à leur contenu et de limiter la redistribution illégale, mais cela peut également restreindre l'utilisation légitime du contenu par les utilisateurs. 
+
+Pour obtenir la clé de déchiffrement, le lecteur TF1 fait une requête au serveur de licences de TF1 et la clé se trouve dans la réponse. Malheureusement, cette réponse est chiffrée et je ne possède pas les capacités nécessaires au déchiffrement de ces données. Pour plus d'informations, je vous invite à lire mon topic sur NsaneForums ayant obtenu des réponses intéressantes d'un utilisateur, voici le [lien](https://nsaneforums.com/topic/438184-i-cant-find-the-drm-key-from-a-license-server-response/). 
+
+Certains contenus (souvent des séries étrangères, comme Grey's Anatomy etc) sont donc protégés par DRM. Ils peuvent être téléchargés et assemblés, mais vous ne pourrez pas les lire.
 
 ## 🔧 Credits
 
