@@ -4,11 +4,11 @@
 
 
 <h1 align="center">
-<a href="https://github.com/Nathoune987/TF1-Downloader"><img src="https://i.imgur.com/YIkuCQc.png"></a>
+<a href="https://github.com/spel987/TF1-Downloader"><img src="https://i.imgur.com/YIkuCQc.png"></a>
 </h1>
 
 <h1 align="center">
-<a href="https://github.com/Nathoune987/TF1-Downloader/archive/refs/heads/main.zip"><img src="https://i.imgur.com/mqFcmoc.png" width="250"></a>
+<a href="https://github.com/spel987/TF1-Downloader/archive/refs/heads/main.zip"><img src="https://i.imgur.com/mqFcmoc.png" width="250"></a>
 </h1>
 
 ## 🚀 Caractéristiques
@@ -119,15 +119,15 @@ Certains contenus (souvent des séries étrangères, comme Grey's Anatomy etc) s
 
 ## 🔧 Credits
 
-- Nathoune<br>
-    Discord : `Nathoune#6622`<br>
-    Email : `nathoune987@proton.me`<br>
-    GitHub : https://github.com/Nathoune987
+- Spel<br>
+    Discord : `spel987`<br>
+    Email : `spel@usurp.in`<br>
+    GitHub : https://github.com/spel987
 
 
 ## ❓ Suggestions
 
-Si vous avez des questions ou des suggestions, veuillez ouvrir une [issue](https://github.com/Nathoune987/TF1-Downloader/issues). 
+Si vous avez des questions ou des suggestions, veuillez ouvrir une [issue](https://github.com/spel987/TF1-Downloader/issues). 
 
 ## 💸Donations
 
@@ -135,9 +135,9 @@ Si vous aimez ce projet ou souhaitez le soutenir, vous pouvez faire des dons.
 
 Ethereum : 
 ```
-0x43f7B5b062AD6c560ca0B46B8F2D11c64df2B0AD
+0x79024c8eA7Bfdef93cBa538eB6288a9bB40eFC97
 ```
 Bitcoin :
 ```
-bc1q32pf2lg98l273jhvrq8d4kk9jumqt8y8jhfpmp
+bc1qua3qmrhlv3e53ydynwvfc2wq8q7wteqxwlewa4
 ```
