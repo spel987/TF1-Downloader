@@ -19,7 +19,7 @@ def ascii_print():
   | | |  _|  | |  | | | / _ \ \ /\ / / '_ \| |/ _ \ / _` |/ _` |/ _ \ '__|
   | | | |   _| |_ | |/ / (_) \ V  V /| | | | | (_) | (_| | (_| |  __/ |   
   \_/ \_|   \___/ |___/ \___/ \_/\_/ |_| |_|_|\___/ \__,_|\__,_|\___|_|{Fore.RESET}""")
-    print("\r\n                  ~ https://github.com/Nathoune987")
+    print("\r\n                  ~ https://github.com/spel987")
 
 def delete_temp_files():
     Popen("cd assets/dl_temp && del * /S /Q", shell=True, stdout=DEVNULL)
