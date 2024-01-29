@@ -128,16 +128,3 @@ Certains contenus (souvent des séries étrangères, comme Grey's Anatomy etc) s
 ## ❓ Suggestions
 
 Si vous avez des questions ou des suggestions, veuillez ouvrir une [issue](https://github.com/spel987/TF1-Downloader/issues). 
-
-## 💸Donations
-
-Si vous aimez ce projet ou souhaitez le soutenir, vous pouvez faire des dons.
-
-Ethereum : 
-```
-0x79024c8eA7Bfdef93cBa538eB6288a9bB40eFC97
-```
-Bitcoin :
-```
-bc1qua3qmrhlv3e53ydynwvfc2wq8q7wteqxwlewa4
-```
