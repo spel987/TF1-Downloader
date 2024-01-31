@@ -120,8 +120,7 @@ Certains contenus (souvent des séries étrangères, comme Grey's Anatomy etc) s
 ## 🔧 Credits
 
 - Spel<br>
-    Discord : `spel987`<br>
-    Email : `spel@usurp.in`<br>
+    Email : `spel987@pm.me`<br>
     GitHub : https://github.com/spel987
 
 
