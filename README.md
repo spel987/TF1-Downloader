@@ -2,9 +2,10 @@
 
 ## Téléchargeur de replays TF1
 
+## ⚠️ Ce dépôt est obsolète.
 
 <h1 align="center">
-<a href="https://github.com/spel987/TF1-Downloader"><img src="https://i.imgur.com/YIkuCQc.png"></a>
+<a href="https://github.com/spel987/TF1-Downloader"><img src="https://i.imgur.com/D1n9qMu.png"></a>
 </h1>
 
 <h1 align="center">
